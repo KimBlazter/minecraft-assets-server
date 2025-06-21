@@ -17,9 +17,7 @@ RUN pnpm install --frozen-lockfile
 # Copy the rest of the application code
 COPY . .
 
-# Scan assets
-RUN pnpm generate
-
 EXPOSE 8000
 
-CMD ["pnpm", "serve"]
+CMD ["/bin/sh", "-c", "pnpm extract /app/minecraft.jar && pnpm generate && pnpm serve"]
+
