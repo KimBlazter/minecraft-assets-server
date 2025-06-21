@@ -5,6 +5,12 @@ const ROOT = "./assets";
 const ASSETS_ROOT = `${ROOT}/minecraft/`;
 const OUTPUT_FILE = `${ROOT}/assets-index.json`;
 
+// Ensure the assets root directory exists
+if (!fs.existsSync(ROOT)) {
+    console.error(`Error: The directory "${ROOT}" does not exist.`);
+    process.exit(1);
+}
+
 const scanDirectory = (dirPath, fileFilter) => {
     const results = [];
 
