@@ -26,7 +26,7 @@ pnpm install     # or: yarn install / npm install
 ### 1. Extract assets from a `.jar` file
 
 ```bash
-pnpm extract
+pnpm extract {mc-version}.jar
 ```
 This will extract the `assets/` folder into the `./assets/` directory.
 
@@ -49,19 +49,21 @@ pnpm serve
 ### 1. Build the image
 
 ```bash
-docker build -t minecraft-assets-server .
+docker build -t mc-assets-server .
 ```
 
 ### 2. Run the container with a mounted `.jar` file
 
 ```bash
-docker run -v ./{mc-version}.jar:/app/mc.jar minecraft-assets-server
+docker run -p 8000:8000 -v ./{mc-version}.jar:/app/mc.jar mc-assets-server
 ```
 
 This will:
-- Extract assets to ./assets/
-- (Optionally) generate assets-index.json if you run the generate step inside the container
+- Extract assets to `./assets/`
+- (Optionally) generate `assets-index.json` if you run the generate step inside the container
 - Serve assets at http://localhost:8000
+
+---
 
 ## 📁 Folder structure (`1.21.5`)
 ```
