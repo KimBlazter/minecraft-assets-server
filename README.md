@@ -98,3 +98,28 @@ This will:
             └── 📁trims
 ```
 
+---
+
+## 🎯 How to get a Minecraft `.jar` file (from your local installation)
+
+If you already have Minecraft installed via the official launcher, you can extract the `.jar` file for any installed version directly from your system.
+
+### 🧭 Step-by-step instructions
+
+#### 🪟 Windows
+
+1. Open the **Run** dialog (`Windows + R`) and type: `%appdata%.minecraft/versions`
+2. Inside the `versions/` folder, choose the version you want (e.g. `1.21.5/`).
+3. You’ll find a file like: `1.21.5.jar`
+4. Copy that `.jar` file into your project directory and rename it if needed
+
+#### 🍎 macOS
+
+1. Open Finder and press `Cmd + Shift + G`, then enter: `~/Library/Application Support/minecraft/versions`
+2. Locate your version folder (e.g. `1.21.5/`) and find a file like: `1.21.5.jar`
+3. Copy that `.jar` file into your project directory and rename it if needed
+
+#### 🐧 Linux
+
+1. Navigate to: `~/.minecraft/versions/1.21.5/1.21.5.jar`
+2. Copy the file into your project directory and rename it if needed
