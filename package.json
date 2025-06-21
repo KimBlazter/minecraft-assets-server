@@ -4,8 +4,8 @@
     "description": "",
     "scripts": {
         "serve": "http-server ./assets -p 8000 --cors --gzip --cache 'max-age=31536000,immutable'",
-        "extract": "node extract-assets.js",
-        "generate": "node scan-assets.js"
+        "extract": "node scripts/extract-assets.js",
+        "generate": "node scripts/scan-assets.js"
     },
     "keywords": [],
     "author": "",
