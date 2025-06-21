@@ -63,7 +63,7 @@ const run = () => {
     };
 
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(index, null, 2));
-    console.log("✅ Index des assets généré avec succès.");
+    console.log("✅ Asset index generated successfully.");
 };
 
 run();
