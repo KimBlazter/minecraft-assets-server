@@ -1,17 +1,22 @@
 {
-  "name": "minecraft-assets-server",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "serve": "http-server ./assets -p 8000 --cors --gzip --cache 'max-age=31536000,immutable'",
-    "generate": "node scan-assets.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.11.0",
-  "dependencies": {
-    "adm-zip": "^0.5.16",
-    "http-server": "^14.1.1"
-  }
+    "name": "minecraft-assets-server",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "serve": "http-server ./assets -p 8000 --cors --gzip --cache 'max-age=31536000,immutable'",
+        "extract": "node extract-assets.js",
+        "generate": "node scan-assets.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module",
+    "packageManager": "pnpm@10.11.0",
+    "dependencies": {
+        "adm-zip": "^0.5.16",
+        "http-server": "^14.1.1"
+    },
+    "devDependencies": {
+        "prettier": "^3.5.3"
+    }
 }
