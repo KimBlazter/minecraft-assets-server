@@ -4,7 +4,7 @@ import path from "path";
 
 // CONFIG
 const jarPath = process.argv[2]; // ex: "./1.21.5.jar"
-const outputDir = "./assets-test";
+const outputDir = "./assets";
 
 // Ensure the jar file path is provided and exists
 if (!jarPath || !fs.existsSync(jarPath)) {
